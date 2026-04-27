@@ -51,6 +51,40 @@
         .cta-section { background: var(--gold); color: #000; padding: 60px 20px; text-align: center; margin-top: 80px; }
         .cta-btn { background: #000; color: #fff; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 900; display: inline-block; margin-top: 25px; transition: 0.3s; }
         .cta-btn:hover { background: #333; }
+        /* Gifts Section */
+        .gifts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+        .gift-card { 
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a); 
+            padding: 40px; 
+            border-radius: 25px; 
+            border: 2px solid var(--gold); 
+            position: relative; 
+            overflow: hidden;
+            transition: 0.4s;
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.1);
+        }
+        .gift-card:hover { transform: translateY(-10px); border-color: var(--accent-green); box-shadow: 0 20px 40px rgba(46, 204, 113, 0.15); }
+        .gift-badge { 
+            position: absolute; 
+            top: 20px; 
+            left: -35px; 
+            background: var(--accent-green); 
+            color: #000; 
+            padding: 10px 45px; 
+            transform: rotate(-45deg); 
+            font-weight: 900; 
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+        .gift-card h3 { color: var(--gold); font-size: 1.8rem; margin-bottom: 20px; line-height: 1.3; }
+        .gift-features { list-style: none; margin-bottom: 30px; padding: 0; }
+        .gift-features li { margin-bottom: 12px; font-size: 1.05rem; display: flex; align-items: flex-start; gap: 10px; color: #ddd; text-align: right; }
+        .gift-features li::before { content: "✅"; font-size: 1.2rem; }
+        .price-box { display: flex; align-items: center; gap: 15px; margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; }
+        .old-price { text-decoration: line-through; color: #666; font-size: 1.3rem; }
+        .new-price { color: var(--accent-green); font-size: 2.2rem; font-weight: 900; }
+        .gift-tagline { background: rgba(52, 152, 219, 0.1); color: var(--gold); padding: 5px 15px; border-radius: 50px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
     </style>
 </head>
 <body>
@@ -183,6 +217,52 @@
         <p style="font-size: 0.85rem; color: #666; margin-top: 15px; text-align: center; line-height: 1.4;">
             * ملاحظات الجدول: الأرقام مستوحاة من تقارير تحول رقمي عالمية ودراسات BCG (تتراوح بين 5-10% من إجمالي الدخل الرقمي).<br>
         </p>
+    </section>
+
+    <section class="section" style="background: linear-gradient(to bottom, #0a0a0a, #111); border-top: 1px solid #222; margin-top: 60px; border-radius: 30px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <div class="gift-tagline">عرض خاص وحصري لموقع سكاي للأسنان</div>
+            <h2 style="font-size: 2.8rem; color: var(--gold); margin-bottom: 15px;">احصل على أحدى هذة الأدوات الاحترافية مجاناً </h2>
+            <p style="font-size: 1.2rem; color: #888;">عند طلبك للموقع اليوم، سنمنحك القوة الكاملة للذكاء الاصطناعي مجاناً</p>
+        </div>
+
+        <div class="gifts-grid">
+            <!-- Gift 1 -->
+            <div class="gift-card">
+                <div class="gift-badge">هدية مجانية</div>
+                <div class="gift-tagline">AI Marketing Kit</div>
+                <h3>حقيبة جذب مرضى الأسنان (AI)</h3>
+                <ul class="gift-features">
+                    <li>إنشاء محتوى تسويقي احترافي وعالي التحويل</li>
+                    <li>أتمتة عمليات التسويق بالكامل لتوفير الوقت</li>
+                    <li>جذب عملاء محتملين بشكل مستمر باستخدام الذكاء الاصطناعي</li>
+                    <li>مضاعفة أرباح العيادة عند الاستخدام الصحيح</li>
+                    <li>لا يتطلب أي مهارات تقنية أو خبرة مسبقة</li>
+                </ul>
+                <div class="price-box">
+                    <span class="old-price">299$</span>
+                    <span class="new-price">0$ <small style="font-size: 1rem; color: #888;">(مجانًا)</small></span>
+                </div>
+            </div>
+
+            <!-- Gift 2 -->
+            <div class="gift-card">
+                
+                <div class="gift-tagline">AI Patient Message Generator</div>
+                <h3>مولد رسائل المرضى الذكي</h3>
+                <ul class="gift-features">
+                    <li>إنشاء ردود ذكية واحترافية لاستفسارات المرضى</li>
+                    <li>صياغة رسائل تذكير بالمواعيد تزيد من نسبة الحضور</li>
+                    <li>تحويل المحادثات البسيطة إلى حجوزات مؤكدة</li>
+                    <li>توفير ساعات من العمل اليدوي في المراسلات</li>
+                    <li>تحسين تجربة المريض وزيادة الرضا عن الخدمة</li>
+                </ul>
+                <div class="price-box">
+                    <span class="old-price">199$</span>
+                    <span class="new-price">0$ <small style="font-size: 1rem; color: #888;">(مجانًا)</small></span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="status-alert" style="background: linear-gradient(145deg, #0a0c1a, #000); border: 2px solid var(--accent-green); margin: 60px auto; transform: scale(1.05); box-shadow: 0 10px 30px rgba(46, 204, 113, 0.1);">
